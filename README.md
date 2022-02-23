@@ -2,7 +2,7 @@
 
 ![Downloads](https://img.shields.io/packagist/dt/akaunting/laravel-mutable-observer)
 ![Tests](https://img.shields.io/github/workflow/status/akaunting/laravel-mutable-observer/Tests?label=tests)
-[![StyleCI](https://github.styleci.io/repos/442271942/shield?style=flat&branch=master)](https://styleci.io/repos/442271942)
+[![StyleCI](https://github.styleci.io/repos/462492001/shield?style=flat&branch=master)](https://styleci.io/repos/462492001)
 [![Quality](https://img.shields.io/scrutinizer/quality/g/akaunting/laravel-mutable-observer?label=quality)](https://scrutinizer-ci.com/g/akaunting/laravel-mutable-observer)
 [![License](https://img.shields.io/github/license/akaunting/laravel-mutable-observer)](LICENSE.md)
 
