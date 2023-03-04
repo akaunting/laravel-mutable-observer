@@ -1,7 +1,7 @@
 # Mutable observer package for Laravel
 
 ![Downloads](https://img.shields.io/packagist/dt/akaunting/laravel-mutable-observer)
-![Tests](https://img.shields.io/github/workflow/status/akaunting/laravel-mutable-observer/Tests?label=tests)
+![Tests](https://img.shields.io/github/actions/workflow/status/akaunting/laravel-mutable-observer/tests.yml?label=tests)
 [![StyleCI](https://github.styleci.io/repos/462492001/shield?style=flat&branch=master)](https://styleci.io/repos/462492001)
 [![License](https://img.shields.io/github/license/akaunting/laravel-mutable-observer)](LICENSE.md)
 
