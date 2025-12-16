@@ -43,6 +43,35 @@ class ProxyTest extends TestCase
 
         (new Proxy($target, ['cloaked']))->unknown();
     }
+
+    public function testItPassesArgumentsToTargetMethod(): void
+    {
+        $target = new ProxyTarget;
+        $proxy = new Proxy($target, ['cloaked']);
+
+        $result = $proxy->withArguments('test', 123);
+
+        $this->assertSame('test-123', $result);
+    }
+
+    public function testItSwallowsMethodsWithArguments(): void
+    {
+        $target = new ProxyTarget;
+        $proxy = new Proxy($target, ['withArguments']);
+
+        $result = $proxy->withArguments('test', 123);
+
+        $this->assertNull($result);
+    }
+
+    public function testItWorksWithEmptyEventArray(): void
+    {
+        $target = new ProxyTarget;
+        $proxy = new Proxy($target, []);
+
+        $this->assertSame('cloaked', $proxy->cloaked());
+        $this->assertSame('uncloaked', $proxy->uncloaked());
+    }
 }
 
 class ProxyTarget
@@ -55,5 +84,10 @@ class ProxyTarget
     public function cloaked(): string
     {
         return 'cloaked';
+    }
+
+    public function withArguments(string $arg1, int $arg2): string
+    {
+        return $arg1 . '-' . $arg2;
     }
 }
