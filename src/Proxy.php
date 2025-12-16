@@ -1,22 +1,32 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Akaunting\MutableObserver;
 
 use BadMethodCallException;
 
 class Proxy
 {
-    /** @var object */
-    private $target;
+    /**
+     * Create a new proxy instance.
+     *
+     * @param  object  $target  The target observer to proxy
+     * @param  array<int, string>  $events  The events to mute
+     */
+    public function __construct(
+        private readonly object $target,
+        private readonly array $events = []
+    ) {}
 
-    /** @var array */
-    private $events;
-
-    public function __construct($target, array $events = [])
-    {
-        $this->target = $target;
-        $this->events = $events;
-    }
+    /**
+     * Handle dynamic method calls to the target.
+     *
+     * @param  string  $name
+     * @param  array<int, mixed>  $arguments
+     * @return mixed
+     * @throws BadMethodCallException
+     */
 
     public function __call($name, $arguments)
     {

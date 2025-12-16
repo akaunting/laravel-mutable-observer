@@ -7,3 +7,13 @@
 .phpunit.result.cache
 composer.phar
 composer.lock
+
+# Code Quality Tools
+/.php-cs-fixer.cache
+/.phpunit.cache
+/coverage
+/infection.log
+/infection-summary.log
+/infection.json
+/psalm-baseline.xml
+/.phpstan.result.cache
