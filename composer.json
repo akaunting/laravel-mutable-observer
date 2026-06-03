@@ -31,7 +31,7 @@
         "orchestra/testbench": "^7.4|^8.0|^9.0|^10.0",
         "phpunit/phpunit": "^9.5|^10.0|^11.0",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "larastan/larastan": "^2.0",
+        "larastan/larastan": "^3.10",
         "infection/infection": "^0.27",
         "psalm/plugin-laravel": "^2.11"
     },
